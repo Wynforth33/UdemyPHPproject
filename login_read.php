@@ -1,19 +1,12 @@
 <?php 
-  define("TITLE", "Login | Login App");
+  // INCLUDES
+  include "db.php";
   
-  // SYNTAX: function mysqli_connect("server","adminUser","adminPass","Database")
-  $connection = mysqli_connect("localhost", "root", "root", "loginapp");
-      
-  // Test if Connected to Database
-  if($connection){
-      echo "we are connected";
-  } else {
-      die("Database Connection Failed!");
-  }
+  // CONSTANTS
+  define("TITLE", "Login_Update | Login App");
       
   $query  = "SELECT * FROM users";
-      
-      
+         
   // SYNTAX: mysqli_query('connection to database', 'Query to be sent to database')
   $result = mysqli_query($connection, $query);
       

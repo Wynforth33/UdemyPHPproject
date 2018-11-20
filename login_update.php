@@ -3,7 +3,7 @@
   include "db.php";
   
   // CONSTANTS
-  define("TITLE", "Login | Login App");
+  define("TITLE", "Login_Update | Login App");
   
   $query  = "SELECT * FROM users";
   $result = mysqli_query($connection, $query);
