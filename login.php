@@ -1,5 +1,24 @@
 <?php 
   define("TITLE", "Login | Login App");
+  
+  if(isset($_POST['submit'])) {
+      
+      $username = $_POST['username'];
+      $password = $_POST['password'];
+      
+      if($username) {
+          echo "<h1>Welcome " . $username . "</h1><br>";
+      }
+      
+      if($password) {
+          echo "<h2>Your Password is: " . $password . "</h2><br>";
+      }
+  }
+
+
+
+
+
 
 ?>
 
@@ -17,8 +36,6 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   
 </head>
-
-
 <body>
   
   <!-- CONTENT -->
