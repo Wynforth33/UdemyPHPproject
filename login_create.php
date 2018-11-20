@@ -16,12 +16,14 @@
           die("Database Connection Failed!");
       }
       
-      // Test if Both Username/Pasword were submitted.
-      if($username && $password) {
-          echo "<h1>Welcome " . $username . "</h1><br>";
-          echo "<h2>Your Password is: " . $password . "</h2><br>";
-      } else {
-          echo "Both Username and Password required for Login!";
+      $query  = "INSERT INTO users(username, password)";
+      $query .= "VALUES ('$username', '$password')";
+      
+      // SYNTAX: mysqli_query('connection to database', 'Query to be sent to database')
+      $result = mysqli_query($connection, $query);
+      
+      if(!$result) {
+          die("Query FAILED! " . mysqli_error());
       }
 
   }
@@ -45,7 +47,7 @@
   <div class="container">
         
     <div class="col-sm-6">
-      <form action="login.php" method="post">
+      <form action="login_create.php" method="post">
        
         <div class="form-group">
           <label for="username">Username</label>
