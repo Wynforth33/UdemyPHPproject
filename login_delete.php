@@ -1,6 +1,6 @@
 <?php include "./includes/functions.php"; ?>
 <?php define("TITLE", "Login_Update | Login App"); ?>
-<?php updateTable(); ?>
+<?php deleteRows(); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -19,8 +19,8 @@
   <div class="container">
         
     <div class="col-sm-6">
-      <h1 class="text-center">UPDATE</h1>
-      <form action="login_update.php" method="post">
+      <h1 class="text-center">DELETE</h1>
+      <form action="login_delete.php" method="post">
        
         <div class="form-group">
           <label for="username">Username</label>
@@ -37,8 +37,8 @@
                 <?php showAllData(); ?>
             </select>
         </div><!-- .form-group -->
-  
-        <input type="submit" class="btn btn-primary" name="submit" value="Update">
+        
+        <input type="submit" class="btn btn-primary" name="submit" value="DELETE">
         
       </form>
     </div><!-- .col-sm-6 -->
